@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales | Jurigo</title>
+    <meta name="description" content="Mentions légales du site Jurigo - Informations légales et éditoriales.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --col-primary: #1e293b;
+            --col-primary-light: #334155; 
+            --col-action: #dc2626;
+            --col-action-hover: #b91c1c;
+            --col-action-light: #fef2f2;
+            --col-bg-body: #f9fafb;
+            --col-bg-white: #ffffff;
+            --col-border: #e2e8f0;
+            --col-text-main: #0f172a;
+            --col-text-muted: #64748b;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --radius-std: 6px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--col-text-main);
+            background-color: var(--col-bg-body);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--col-primary);
+            line-height: 1.2;
+        }
+
+        a { text-decoration: none; color: inherit; transition: all 0.2s ease; }
+        ul { list-style: none; }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .flex-center-y { display: flex; align-items: center; }
+        .flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: var(--radius-std);
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+            gap: 8px;
+        }
+
+        .btn-outline {
+            background-color: white;
+            border-color: var(--col-border);
+            color: var(--col-primary);
+        }
+        .btn-outline:hover {
+            border-color: var(--col-primary);
+            background-color: var(--col-primary);
+            color: white;
+        }
+
+        .navbar {
+            background: white;
+            height: 72px;
+            border-bottom: 1px solid var(--col-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--col-primary);
+            letter-spacing: -0.5px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .logo-dot { color: var(--col-action); font-size: 1.8rem; line-height: 0; margin-top: 4px; }
+
+        .nav-links { display: flex; gap: 32px; font-weight: 600; font-size: 0.9rem; color: var(--col-primary-light); }
+        .nav-links a:hover { color: var(--col-action); }
+
+        .nav-contact {
+            display: flex; align-items: center; gap: 8px; 
+            font-weight: 700; font-size: 0.9rem; color: var(--col-primary);
+            margin-right: 24px;
+        }
+
+        .legal-section {
+            background: white;
+            padding: 80px 0 100px;
+        }
+
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 48px;
+            border: 1px solid var(--col-border);
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .legal-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: var(--col-primary);
+        }
+
+        .legal-subtitle {
+            font-size: 1rem;
+            color: var(--col-text-muted);
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--col-border);
+        }
+
+        .legal-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: var(--col-primary);
+        }
+
+        .legal-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-content p {
+            margin-bottom: 16px;
+            line-height: 1.8;
+            color: var(--col-text-main);
+        }
+
+        .legal-content strong {
+            font-weight: 700;
+            color: var(--col-primary);
+        }
+
+        .warning-box {
+            background: #fef2f2;
+            border-left: 4px solid var(--col-action);
+            padding: 20px 24px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--col-action);
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background: white;
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--col-border);
+            font-size: 0.9rem;
+        }
+
+        .footer-heading { 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            font-size: 0.8rem; 
+            letter-spacing: 0.05em; 
+            color: var(--col-primary); 
+            margin-bottom: 24px; 
+        }
+
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: var(--col-text-muted); }
+        .footer-links a:hover { color: var(--col-action); text-decoration: underline; }
+
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+        .mb-4 { margin-bottom: 16px; }
+        .mt-4 { margin-top: 16px; }
+
+        @media (max-width: 900px) {
+            .grid-2, .grid-4 { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .legal-content { padding: 32px 24px; }
+            .legal-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar flex-center-y">
+        <div class="container flex-between" style="width: 100%;">
+            <a href="index.html" class="logo">Jurigo<span class="logo-dot">.</span></a>
+            
+            <div class="nav-links">
+                <a href="index.html#creation">Création</a>
+                <a href="index.html#gestion">Gestion</a>
+                <a href="index.html#tarifs">Tarifs</a>
+                <a href="index.html#blog">Guides</a>
+            </div>
+
+            <div class="flex-center-y">
+                <div class="nav-contact">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    01 89 23 45 67
+                </div>
+                <a href="#login" class="btn btn-outline" style="padding: 8px 16px;">Espace Client</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="legal-section">
+        <div class="container">
+            <div class="legal-content">
+                <h1 class="legal-title">Mentions Légales</h1>
+                <p class="legal-subtitle">Conformément aux dispositions de la loi n° 2004-575 du 21 juin 2004 pour la confiance en l'économie numérique, il est précisé aux utilisateurs du site jurigo.fr l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi.</p>
+
+                <h2>1. Édition du site</h2>
+                <p>Le présent site est édité par la société <strong>Jurigo</strong>, Société par Actions Simplifiée Unipersonnelle (SASU) au capital de 500 euros.</p>
+                <p><strong>Siège social :</strong> 6 Rue d'Armaillé, 75017 Paris.</p>
+                <p><strong>Immatriculation :</strong> En cours d'immatriculation au RCS de Paris.</p>
+                <p><strong>Numéro de TVA Intracommunautaire :</strong> En cours d'attribution.</p>
+                <p><strong>Email de contact :</strong> jurigo@gmx.fr</p>
+                <p><strong>Téléphone :</strong> +33 6 15 32 34 92</p>
+
+                <h2>2. Directeur de la publication</h2>
+                <p>Le Directeur de la publication est <strong>Monsieur Yusuf Topcu</strong> en qualité de Président.</p>
+
+                <h2>3. Hébergement</h2>
+                <p>Le Site est hébergé par la société <strong>Hetzner Online GmbH</strong>.</p>
+                <p><strong>Adresse :</strong> Industriestr. 25, 91710 Gunzenhausen, Allemagne.</p>
+                <p><strong>Téléphone :</strong> +49 (0)9831 505-0</p>
+                <p><strong>Site web :</strong> www.hetzner.com</p>
+
+                <div class="warning-box">
+                    <h3>4. Avertissement important (Limitation de responsabilité)</h3>
+                    <p><strong>La société Jurigo n'est pas un cabinet d'avocats, ni un cabinet d'expertise comptable.</strong></p>
+                    <p>Jurigo est une plateforme technologique permettant aux utilisateurs de générer des documents juridiques et administratifs de manière automatisée à partir de modèles. Jurigo ne fournit aucun conseil juridique, fiscal ou comptable personnalisé. L'utilisation des services de Jurigo ne saurait se substituer à la consultation d'un professionnel du droit ou du chiffre (avocat, notaire, expert-comptable) compétent pour analyser la situation particulière de l'utilisateur.</p>
+                    <p>En conséquence, Jurigo ne pourra être tenue responsable de l'inadéquation des documents générés à la situation spécifique de l'utilisateur si celui-ci a mal renseigné les informations ou si sa situation requiert une analyse complexe sortant du cadre de l'automatisation proposée par la plateforme.</p>
+                </div>
+
+                <h2>5. Propriété intellectuelle</h2>
+                <p>L'ensemble des contenus (textes, images, base de données, algorithmes, architecture) présents sur le site est la propriété exclusive de la société Jurigo. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de Jurigo.</p>
+
+                <h2>6. Données personnelles</h2>
+                <p>Le traitement des données personnelles des utilisateurs fait l'objet d'une <a href="politique-confidentialite.html" style="color: var(--col-action); font-weight: 600;">politique de confidentialité</a> accessible sur le site. Conformément au RGPD, l'utilisateur dispose d'un droit d'accès, de rectification et de suppression de ses données qu'il peut exercer en contactant : <strong>jurigo@gmx.fr</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="grid-4">
+                <div>
+                    <a href="index.html" class="logo mb-4">Jurigo<span class="logo-dot">.</span></a>
+                    <p style="color: var(--col-text-muted); font-size: 0.9rem; line-height: 1.6;">
+                        Simplifiez votre vie d'entrepreneur. Une plateforme unique pour créer, gérer et développer votre entreprise.
+                    </p>
+                </div>
+                
+                <div>
+                    <div class="footer-heading">Création</div>
+                    <ul class="footer-links">
+                        <li><a href="#">SASU</a></li>
+                        <li><a href="#">SAS</a></li>
+                        <li><a href="#">EURL</a></li>
+                        <li><a href="#">SARL</a></li>
+                        <li><a href="#">SCI</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-heading">Gestion</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Modification statuts</a></li>
+                        <li><a href="#">Cession de parts</a></li>
+                        <li><a href="#">Changement de gérant</a></li>
+                        <li><a href="#">Dissolution / Liquidation</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-heading">Jurigo</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="#">Nos tarifs</a></li>
+                        <li><a href="#">Blog & Guides</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid-2 mt-4" style="border-top: 1px solid var(--col-border); padding-top: 32px; font-size: 0.85rem; color: var(--col-text-muted);">
+                <div>
+                    © 2025 Jurigo SAS. Tous droits réservés.
+                </div>
+                <div style="text-align: right;">
+                    <a href="mentions-legales.html" style="margin-left: 24px;">Mentions Légales</a>
+                    <a href="cgu.html" style="margin-left: 24px;">CGU</a>
+                    <a href="politique-confidentialite.html" style="margin-left: 24px;">Confidentialité</a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4" style="font-size: 0.75rem; color: #94a3b8; opacity: 0.8; text-align: center;">
+                Jurigo n'est pas un cabinet d'avocats. Nous fournissons des informations juridiques et un logiciel de génération de documents. Pour un conseil juridique personnalisé, veuillez consulter un avocat.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

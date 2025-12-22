@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions Générales d'Utilisation | Jurigo</title>
+    <meta name="description" content="Conditions générales d'utilisation et de vente de Jurigo - CGU/CGV.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --col-primary: #1e293b;
+            --col-primary-light: #334155; 
+            --col-action: #dc2626;
+            --col-action-hover: #b91c1c;
+            --col-action-light: #fef2f2;
+            --col-bg-body: #f9fafb;
+            --col-bg-white: #ffffff;
+            --col-border: #e2e8f0;
+            --col-text-main: #0f172a;
+            --col-text-muted: #64748b;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --radius-std: 6px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--col-text-main);
+            background-color: var(--col-bg-body);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--col-primary);
+            line-height: 1.2;
+        }
+
+        a { text-decoration: none; color: inherit; transition: all 0.2s ease; }
+        ul { list-style: none; }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .flex-center-y { display: flex; align-items: center; }
+        .flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: var(--radius-std);
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+            gap: 8px;
+        }
+
+        .btn-outline {
+            background-color: white;
+            border-color: var(--col-border);
+            color: var(--col-primary);
+        }
+        .btn-outline:hover {
+            border-color: var(--col-primary);
+            background-color: var(--col-primary);
+            color: white;
+        }
+
+        .navbar {
+            background: white;
+            height: 72px;
+            border-bottom: 1px solid var(--col-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--col-primary);
+            letter-spacing: -0.5px;
+            display: flex; align-items: center; gap: 8px;
+        }
+        .logo-dot { color: var(--col-action); font-size: 1.8rem; line-height: 0; margin-top: 4px; }
+
+        .nav-links { display: flex; gap: 32px; font-weight: 600; font-size: 0.9rem; color: var(--col-primary-light); }
+        .nav-links a:hover { color: var(--col-action); }
+
+        .nav-contact {
+            display: flex; align-items: center; gap: 8px; 
+            font-weight: 700; font-size: 0.9rem; color: var(--col-primary);
+            margin-right: 24px;
+        }
+
+        .legal-section {
+            background: white;
+            padding: 80px 0 100px;
+        }
+
+        .legal-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 48px;
+            border: 1px solid var(--col-border);
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .legal-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: var(--col-primary);
+        }
+
+        .legal-subtitle {
+            font-size: 1rem;
+            color: var(--col-text-muted);
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--col-border);
+        }
+
+        .legal-content h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            color: var(--col-primary);
+        }
+
+        .legal-content h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .legal-content h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: var(--col-primary);
+        }
+
+        .legal-content p {
+            margin-bottom: 16px;
+            line-height: 1.8;
+            color: var(--col-text-main);
+        }
+
+        .legal-content strong {
+            font-weight: 700;
+            color: var(--col-primary);
+        }
+
+        .warning-box {
+            background: #fef2f2;
+            border-left: 4px solid var(--col-action);
+            padding: 20px 24px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+
+        .warning-box p {
+            margin-bottom: 12px;
+        }
+
+        .warning-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            background: white;
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--col-border);
+            font-size: 0.9rem;
+        }
+
+        .footer-heading { 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            font-size: 0.8rem; 
+            letter-spacing: 0.05em; 
+            color: var(--col-primary); 
+            margin-bottom: 24px; 
+        }
+
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: var(--col-text-muted); }
+        .footer-links a:hover { color: var(--col-action); text-decoration: underline; }
+
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+        .mb-4 { margin-bottom: 16px; }
+        .mt-4 { margin-top: 16px; }
+
+        @media (max-width: 900px) {
+            .grid-2, .grid-4 { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .legal-content { padding: 32px 24px; }
+            .legal-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar flex-center-y">
+        <div class="container flex-between" style="width: 100%;">
+            <a href="index.html" class="logo">Jurigo<span class="logo-dot">.</span></a>
+            
+            <div class="nav-links">
+                <a href="index.html#creation">Création</a>
+                <a href="index.html#gestion">Gestion</a>
+                <a href="index.html#tarifs">Tarifs</a>
+                <a href="index.html#blog">Guides</a>
+            </div>
+
+            <div class="flex-center-y">
+                <div class="nav-contact">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    01 89 23 45 67
+                </div>
+                <a href="#login" class="btn btn-outline" style="padding: 8px 16px;">Espace Client</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="legal-section">
+        <div class="container">
+            <div class="legal-content">
+                <h1 class="legal-title">Conditions Générales d'Utilisation</h1>
+                <p class="legal-subtitle">Dernière mise à jour : 22 décembre 2025</p>
+
+                <h2>PRÉAMBULE</h2>
+                <p>Les présentes Conditions Générales (ci-après les "CGU/CGV") régissent l'utilisation du site <strong>jurigo.fr</strong> (le "Site") et les services proposés par la société <strong>Jurigo</strong>, SASU au capital de 500 euros, sise 6 Rue d'Armaillé, 75017 Paris, immatriculée au RCS de Paris (ci-après la "Société").</p>
+                <p>En utilisant le Site et en commandant un Service, le Client accepte sans réserve les présentes conditions.</p>
+
+                <h2>ARTICLE 1 - OBJET ET NATURE DES SERVICES</h2>
+                <p>La Société propose un service en ligne d'automatisation de rédaction d'actes juridiques et administratifs (les "Documents") et d'assistance aux formalités de création et de gestion d'entreprise (les "Formalités").</p>
+                
+                <div class="warning-box">
+                    <p><strong>AVERTISSEMENT IMPORTANT :</strong> La Société JURIGO n'est pas un cabinet d'avocats, ni un cabinet d'expertise comptable. Les Services proposés constituent une assistance administrative et technique. La Société met à disposition des logiciels et des modèles types, mais ne délivre aucun conseil juridique ou fiscal personnalisé. L'utilisation du Site ne dispense pas le Client de consulter un professionnel du droit (avocat, notaire) ou du chiffre pour valider l'adéquation des Documents à sa situation spécifique.</p>
+                </div>
+
+                <h2>ARTICLE 2 - COMMANDE ET PAIEMENT</h2>
+                <h3>2.1 Processus de commande</h3>
+                <p>Le Client remplit un questionnaire en ligne. Ses réponses servent à générer automatiquement les Documents. Le Client est seul responsable de l'exactitude des informations fournies. Une erreur de saisie du Client entraînant le rejet d'une formalité ne saurait engager la responsabilité de la Société.</p>
+
+                <h3>2.2 Prix</h3>
+                <p>Les prix sont indiqués en euros, Hors Taxes (HT) et Toutes Taxes Comprises (TTC). La Société se réserve le droit de modifier ses prix à tout moment, mais le Service sera facturé sur la base du tarif en vigueur au moment de la validation de la commande.</p>
+
+                <h3>2.3 Paiement</h3>
+                <p>Le règlement s'effectue immédiatement par carte bancaire via notre prestataire de paiement sécurisé Stripe. La facture est adressée automatiquement par email au Client après paiement.</p>
+
+                <h2>ARTICLE 3 - RENONCIATION AU DROIT DE RÉTRACTATION</h2>
+                <p>Conformément à l'article L.221-28 du Code de la consommation, le droit de rétractation ne peut être exercé pour les contrats de fourniture d'un contenu numérique non fourni sur un support matériel dont l'exécution a commencé après accord préalable exprès du consommateur et renoncement exprès à son droit de rétractation.</p>
+                <p>En validant sa commande et en accédant immédiatement aux Documents générés ou au lancement des Formalités, le Client renonce expressément à son droit de rétractation de 14 jours. <strong>Aucun remboursement ne sera effectué une fois le service commencé.</strong></p>
+
+                <h2>ARTICLE 4 - RESPONSABILITÉ</h2>
+                <h3>4.1 Obligation de moyens</h3>
+                <p>La Société est tenue à une obligation de moyens dans la fourniture du Service. Elle s'engage à apporter tout le soin nécessaire à la génération des Documents et au traitement des dossiers.</p>
+
+                <h3>4.2 Limitation de responsabilité</h3>
+                <p>La responsabilité de la Société ne pourra être engagée qu'en cas de faute prouvée lui étant directement imputable. En tout état de cause, la responsabilité de la Société est limitée au montant des sommes effectivement payées par le Client pour le Service concerné. La Société ne saurait être tenue responsable des délais de traitement des administrations (Greffe, INPI, Préfecture), ni des rejets de dossiers causés par des informations erronées fournies par le Client.</p>
+
+                <h2>ARTICLE 5 - ACCÈS AU SITE ET MAINTENANCE</h2>
+                <p>La Société s'efforce de maintenir le Site accessible 24h/24 et 7j/7. Toutefois, l'accès peut être interrompu pour des raisons de maintenance technique ou de mise à jour. La Société ne saurait être tenue responsable des dommages résultant d'une indisponibilité temporaire du Site.</p>
+
+                <h2>ARTICLE 6 - PROPRIÉTÉ INTELLECTUELLE</h2>
+                <p>Tous les éléments du Site (textes, logiciels, architecture, modèles de documents) sont la propriété exclusive de la Société. L'achat d'un Service confère au Client un droit d'usage privé et non exclusif sur les Documents générés pour les besoins de sa propre entreprise. Toute reproduction, revente ou exploitation commerciale des modèles de la Société est strictement interdite.</p>
+
+                <h2>ARTICLE 7 - DONNÉES PERSONNELLES</h2>
+                <p>Les données collectées sont nécessaires à l'exécution des Services. Elles sont traitées conformément à notre <a href="politique-confidentialite.html" style="color: var(--col-action); font-weight: 600;">Politique de Confidentialité</a> et au RGPD. Elles sont hébergées sur des serveurs sécurisés (Hetzner) et les paiements sont sécurisés par Stripe.</p>
+
+                <h2>ARTICLE 8 - LOI APPLICABLE ET JURIDICTION</h2>
+                <p>Les présentes CGU/CGV sont soumises au droit français. En cas de litige, et à défaut d'accord amiable, compétence exclusive est attribuée aux tribunaux du ressort de la Cour d'appel de Paris, nonobstant pluralité de défendeurs ou appel en garantie.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="grid-4">
+                <div>
+                    <a href="index.html" class="logo mb-4">Jurigo<span class="logo-dot">.</span></a>
+                    <p style="color: var(--col-text-muted); font-size: 0.9rem; line-height: 1.6;">
+                        Simplifiez votre vie d'entrepreneur. Une plateforme unique pour créer, gérer et développer votre entreprise.
+                    </p>
+                </div>
+                
+                <div>
+                    <div class="footer-heading">Création</div>
+                    <ul class="footer-links">
+                        <li><a href="#">SASU</a></li>
+                        <li><a href="#">SAS</a></li>
+                        <li><a href="#">EURL</a></li>
+                        <li><a href="#">SARL</a></li>
+                        <li><a href="#">SCI</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-heading">Gestion</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Modification statuts</a></li>
+                        <li><a href="#">Cession de parts</a></li>
+                        <li><a href="#">Changement de gérant</a></li>
+                        <li><a href="#">Dissolution / Liquidation</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <div class="footer-heading">Jurigo</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Qui sommes-nous ?</a></li>
+                        <li><a href="#">Nos tarifs</a></li>
+                        <li><a href="#">Blog & Guides</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid-2 mt-4" style="border-top: 1px solid var(--col-border); padding-top: 32px; font-size: 0.85rem; color: var(--col-text-muted);">
+                <div>
+                    © 2025 Jurigo SAS. Tous droits réservés.
+                </div>
+                <div style="text-align: right;">
+                    <a href="mentions-legales.html" style="margin-left: 24px;">Mentions Légales</a>
+                    <a href="cgu.html" style="margin-left: 24px;">CGU</a>
+                    <a href="politique-confidentialite.html" style="margin-left: 24px;">Confidentialité</a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4" style="font-size: 0.75rem; color: #94a3b8; opacity: 0.8; text-align: center;">
+                Jurigo n'est pas un cabinet d'avocats. Nous fournissons des informations juridiques et un logiciel de génération de documents. Pour un conseil juridique personnalisé, veuillez consulter un avocat.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
