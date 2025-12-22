@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  jurigo:
+    image: nginx:alpine
+    container_name: jurigo-website
+    ports:
+      - "3000:80"
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
+      - ./mentions-legales.html:/usr/share/nginx/html/mentions-legales.html:ro
+      - ./politique-confidentialite.html:/usr/share/nginx/html/politique-confidentialite.html:ro
+      - ./cgu.html:/usr/share/nginx/html/cgu.html:ro
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - coolify
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.jurigo.rule=Host(`jurigo.fr`, `www.jurigo.fr`)"
+      - "traefik.http.routers.jurigo.entrypoints=http"
+      - "traefik.http.services.jurigo.loadbalancer.server.port=80"
+
+networks:
+  coolify:
+    external: true
