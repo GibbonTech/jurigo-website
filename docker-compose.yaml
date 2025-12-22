@@ -4,8 +4,8 @@ services:
   jurigo:
     image: nginx:alpine
     container_name: jurigo-website
-    ports:
-      - "3000:80"
+    expose:
+      - "80"
     volumes:
       - ./index.html:/usr/share/nginx/html/index.html:ro
       - ./mentions-legales.html:/usr/share/nginx/html/mentions-legales.html:ro
