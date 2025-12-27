@@ -176,7 +176,7 @@ export const getCompaniesByUser = createServerFn({ method: 'GET' })
   .handler(async () => {
     // This will be called from a loader, so we need to get the session
     // For now, return empty array - will be populated when auth is properly integrated
-    // In production, this would use getRequest() to get the session and filter by userId
+    // In production, this would use getWebRequest() to get the session and filter by userId
     try {
       const result = await db
         .select()

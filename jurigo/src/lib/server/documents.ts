@@ -1,5 +1,5 @@
 import { createServerFn } from '@tanstack/react-start'
-import { getRequest } from '@tanstack/react-start/server'
+import { getWebRequest } from '@tanstack/react-start/server'
 import { auth } from '~/lib/auth'
 import { db, documents, companies, users } from '~/db'
 import { eq } from 'drizzle-orm'
@@ -16,7 +16,7 @@ const getUploadUrlSchema = z.object({
 export const getDocumentUploadUrl = createServerFn({ method: 'POST' })
   .inputValidator(getUploadUrlSchema)
   .handler(async ({ data }) => {
-    const request = getRequest()
+    const request = getWebRequest()
     const session = await auth.api.getSession({ headers: request?.headers })
     
     if (!session?.user?.id) {
@@ -58,7 +58,7 @@ const saveDocumentSchema = z.object({
 export const saveDocument = createServerFn({ method: 'POST' })
   .inputValidator(saveDocumentSchema)
   .handler(async ({ data }) => {
-    const request = getRequest()
+    const request = getWebRequest()
     const session = await auth.api.getSession({ headers: request?.headers })
     
     if (!session?.user?.id) {
@@ -89,7 +89,7 @@ const getDocumentsSchema = z.object({
 export const getCompanyDocuments = createServerFn({ method: 'GET' })
   .inputValidator(getDocumentsSchema)
   .handler(async ({ data }) => {
-    const request = getRequest()
+    const request = getWebRequest()
     const session = await auth.api.getSession({ headers: request?.headers })
     
     if (!session?.user?.id) {
@@ -111,7 +111,7 @@ const getDocumentDownloadUrlSchema = z.object({
 export const getDocumentDownloadUrl = createServerFn({ method: 'GET' })
   .inputValidator(getDocumentDownloadUrlSchema)
   .handler(async ({ data }) => {
-    const request = getRequest()
+    const request = getWebRequest()
     const session = await auth.api.getSession({ headers: request?.headers })
     
     if (!session?.user?.id) {
@@ -138,7 +138,7 @@ const deleteDocumentSchema = z.object({
 export const deleteDocument = createServerFn({ method: 'POST' })
   .inputValidator(deleteDocumentSchema)
   .handler(async ({ data }) => {
-    const request = getRequest()
+    const request = getWebRequest()
     const session = await auth.api.getSession({ headers: request?.headers })
     
     if (!session?.user?.id) {
@@ -172,7 +172,7 @@ const verifyDocumentSchema = z.object({
 export const verifyDocument = createServerFn({ method: 'POST' })
   .inputValidator(verifyDocumentSchema)
   .handler(async ({ data }) => {
-    const request = getRequest()
+    const request = getWebRequest()
     const session = await auth.api.getSession({ headers: request?.headers })
     
     if (!session?.user?.id) {

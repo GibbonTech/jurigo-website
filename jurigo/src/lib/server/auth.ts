@@ -1,12 +1,12 @@
 import { createServerFn } from '@tanstack/react-start'
-import { getRequest } from '@tanstack/react-start/server'
+import { getWebRequest } from '@tanstack/react-start/server'
 import { auth } from '~/lib/auth'
 import { db, users } from '~/db'
 import { eq } from 'drizzle-orm'
 
 export const getSession = createServerFn({ method: 'GET' }).handler(
   async () => {
-    const request = getRequest()
+    const request = getWebRequest()
     const session = await auth.api.getSession({
       headers: request?.headers,
     })
@@ -16,7 +16,7 @@ export const getSession = createServerFn({ method: 'GET' }).handler(
 
 export const getUserRole = createServerFn({ method: 'GET' }).handler(
   async () => {
-    const request = getRequest()
+    const request = getWebRequest()
     const session = await auth.api.getSession({
       headers: request?.headers,
     })
@@ -36,7 +36,7 @@ export const getUserRole = createServerFn({ method: 'GET' }).handler(
 
 export const isAdmin = createServerFn({ method: 'GET' }).handler(
   async () => {
-    const request = getRequest()
+    const request = getWebRequest()
     const session = await auth.api.getSession({
       headers: request?.headers,
     })

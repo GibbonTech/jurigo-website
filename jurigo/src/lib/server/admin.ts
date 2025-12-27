@@ -1,5 +1,5 @@
 import { createServerFn } from '@tanstack/react-start'
-import { getRequest } from '@tanstack/react-start/server'
+import { getWebRequest } from '@tanstack/react-start/server'
 import { auth } from '~/lib/auth'
 import { db, companies, users } from '~/db'
 import { eq, desc, count } from 'drizzle-orm'
@@ -7,7 +7,7 @@ import { z } from 'zod'
 
 export const getAdminStats = createServerFn({ method: 'GET' }).handler(async () => {
   try {
-    const request = getRequest()
+    const request = getWebRequest()
     const session = await auth.api.getSession({ headers: request?.headers })
     
     if (!session?.user?.id) {
@@ -56,7 +56,7 @@ export const getAdminStats = createServerFn({ method: 'GET' }).handler(async () 
 
 export const getAllCompanies = createServerFn({ method: 'GET' }).handler(async () => {
   try {
-    const request = getRequest()
+    const request = getWebRequest()
     const session = await auth.api.getSession({ headers: request?.headers })
     
     if (!session?.user?.id) {
@@ -88,7 +88,7 @@ const updateCompanyStatusSchema = z.object({
 export const updateCompanyStatus = createServerFn({ method: 'POST' })
   .inputValidator(updateCompanyStatusSchema)
   .handler(async ({ data }) => {
-    const request = getRequest()
+    const request = getWebRequest()
     const session = await auth.api.getSession({ headers: request?.headers })
     
     if (!session?.user?.id) {
