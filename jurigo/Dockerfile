@@ -23,7 +23,7 @@ ENV DATABASE_URL=$DATABASE_URL
 ENV BETTER_AUTH_SECRET=$BETTER_AUTH_SECRET
 ENV BETTER_AUTH_URL=$BETTER_AUTH_URL
 
-RUN npm run build 2>&1 || (echo "Build failed, checking output:" && ls -la /app && exit 1)
+RUN npm run build
 
 # Production image, copy all the files and run
 FROM base AS runner
