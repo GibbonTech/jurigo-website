@@ -5,7 +5,8 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-COPY jurigo/package.json jurigo/package-lock.json* ./
+COPY jurigo/package.json ./
+COPY jurigo/package-lock.json ./
 RUN npm ci
 
 # Rebuild the source code only when needed
