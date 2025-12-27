@@ -7,7 +7,7 @@ WORKDIR /app
 
 COPY jurigo/package.json ./
 COPY jurigo/package-lock.json ./
-RUN npm ci
+RUN npm install --omit=dev
 
 # Rebuild the source code only when needed
 FROM base AS builder
