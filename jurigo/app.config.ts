@@ -7,6 +7,5 @@ export default defineConfig({
   },
   server: {
     preset: "node-server",
-    entry: "src/server.ts",
   },
 });
