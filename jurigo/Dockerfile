@@ -24,7 +24,7 @@ ENV BETTER_AUTH_SECRET=$BETTER_AUTH_SECRET
 ENV BETTER_AUTH_URL=$BETTER_AUTH_URL
 ENV NODE_ENV=production
 
-RUN npm run build || (echo "Build failed" && cat /app/package.json && exit 1)
+RUN npm run build 2>&1 || (echo "Build failed with exit code $?" && ls -la /app && exit 1)
 
 # Production image, copy all the files and run
 FROM base AS runner
