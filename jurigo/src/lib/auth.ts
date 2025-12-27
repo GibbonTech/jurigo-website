@@ -37,6 +37,7 @@ export const auth = betterAuth({
     expiresIn: 60 * 60 * 24 * 7, // 7 days
     updateAge: 60 * 60 * 24, // 1 day
   },
+  trustedOrigins: ["https://jurigo.fr"],
 });
 
 export type Session = typeof auth.$Infer.Session;
