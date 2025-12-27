@@ -15,15 +15,15 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
 # Build arguments for environment variables needed at build time
-ARG DATABASE_URL
-ARG BETTER_AUTH_SECRET
-ARG BETTER_AUTH_URL
+ARG DATABASE_URL=postgresql://localhost:5432/jurigo
+ARG BETTER_AUTH_SECRET=build-time-secret
+ARG BETTER_AUTH_URL=http://localhost:3000
 
 ENV DATABASE_URL=$DATABASE_URL
 ENV BETTER_AUTH_SECRET=$BETTER_AUTH_SECRET
 ENV BETTER_AUTH_URL=$BETTER_AUTH_URL
 
-RUN npm run build
+RUN npm run build 2>&1
 
 # Production image, copy all the files and run
 FROM base AS runner
