@@ -22,8 +22,9 @@ ARG BETTER_AUTH_URL=http://localhost:3000
 ENV DATABASE_URL=$DATABASE_URL
 ENV BETTER_AUTH_SECRET=$BETTER_AUTH_SECRET
 ENV BETTER_AUTH_URL=$BETTER_AUTH_URL
+ENV NODE_ENV=production
 
-RUN npm run build
+RUN npm run build || (echo "Build failed" && cat /app/package.json && exit 1)
 
 # Production image, copy all the files and run
 FROM base AS runner
