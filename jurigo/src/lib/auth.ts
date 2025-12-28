@@ -38,6 +38,9 @@ export const auth = betterAuth({
     updateAge: 60 * 60 * 24, // 1 day
   },
   trustedOrigins: ["https://jurigo.fr"],
+  // Explicitly set baseURL to undefined to prevent Better Auth from using
+  // BETTER_AUTH_URL env var which causes HTTPS redirect loops behind Traefik
+  baseURL: undefined as any,
 });
 
 export type Session = typeof auth.$Infer.Session;
