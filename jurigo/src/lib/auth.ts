@@ -1,12 +1,9 @@
 import { betterAuth } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
 import { admin } from "better-auth/plugins";
+import { tanstackStartCookies } from "better-auth/tanstack-start";
 import { db } from "~/db";
 import * as schema from "~/db/schema";
-
-// Delete BETTER_AUTH_URL from process.env to force request inference
-// This prevents Better Auth from enforcing HTTPS redirects behind Traefik
-delete process.env.BETTER_AUTH_URL;
 
 export const auth = betterAuth({
   database: drizzleAdapter(db, {
@@ -26,6 +23,7 @@ export const auth = betterAuth({
     admin({
       adminRoles: ["admin"],
     }),
+    tanstackStartCookies(),
   ],
   user: {
     additionalFields: {
@@ -41,6 +39,7 @@ export const auth = betterAuth({
     expiresIn: 60 * 60 * 24 * 7, // 7 days
     updateAge: 60 * 60 * 24, // 1 day
   },
+  baseURL: "https://jurigo.fr",
   trustedOrigins: ["https://jurigo.fr"],
 });
 
