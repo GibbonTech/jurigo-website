@@ -38,6 +38,7 @@ export const auth = betterAuth({
     updateAge: 60 * 60 * 24, // 1 day
   },
   trustedOrigins: ["https://jurigo.fr"],
+  baseURL: process.env.BETTER_AUTH_URL || "https://jurigo.fr",
 });
 
 export type Session = typeof auth.$Infer.Session;
